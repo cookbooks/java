@@ -45,17 +45,6 @@ node.run_state[:java_pkgs].each do |pkg|
       if node.java.install_flavor == "sun"
         response_file "java.seed"
       end
-      notifies :run, resources(:execute => "update-java-alternatives"), :delayed
-    end
-  end
-end
-
-# re-run update-java-alternatives if our java flavor changes
-if node.languages.attribute?("java")
-  unless node.languages.java.hotspot.name.match(current_java_version_pattern)
-    log "Java install_flavor has changed, re-running 'update-java-alternatives'" do
-      level :info
-      notifies :run, resources(:execute => "update-java-alternatives"), :immediately
     end
   end
 end

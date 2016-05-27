@@ -1,7 +1,7 @@
 Description
 ===========
 
-Installs a Java. Uses OpenJDK by default but supports installation of Oracle's JDK.
+Installs Java. Uses OpenJDK (by default) but supports installation of Oracle's JDK.
 
 This cookbook also provides the `java_ark` LWRP which other java
 cookbooks can use to install java-related applications from binary
@@ -13,8 +13,8 @@ future as its functionality is useful for other purposes.
 Requirements
 ============
 
-Platform
---------
+Platforms Supported
+-------------------
 
 * Debian, Ubuntu
 * CentOS, Red Hat, Fedora, Scientific, Amazon
